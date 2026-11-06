@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Diapols</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to content</a>
+<header class="site-header">
+<div class="wrap ">
+<p class="site-title"><a href="../">Diapols</a></p>
+<nav aria-label="Main"><ul><li><a href="../">Dia-Pol</a></li><li><a href="../team/">Project Team</a></li><li><a href="../project-outputs/">Project Outputs</a></li><li><a href="../conferences/">Conferences</a></li><li><a href="../contact/" aria-current="page">Contact</a></li></ul></nav>
+</div>
+</header>
+<main id="content" class="wrap ">
+<h1 class="entry-title">Contact</h1>
+<h2>Get in touch</h2>
+<form id="contact-form" class="contact-form">
+<label for="name">Name <span class="req">(required)</span></label>
+<input id="name" name="name" type="text" required autocomplete="name">
+<label for="email">Email <span class="req">(required)</span></label>
+<input id="email" name="email" type="email" required autocomplete="email">
+<label for="message">Message</label>
+<textarea id="message" name="message" rows="7"></textarea>
+<button type="submit">Submit</button>
+</form>
+<p class="note">Submit opens your email app with this message ready to send. You can also write to <a href="mailto:basak.taraktas@bogazici.edu.tr">basak.taraktas@bogazici.edu.tr</a>.</p>
+</main>
+<footer class="site-footer"><div class="wrap ">Diapols</div></footer>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var body = 'Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\n\n' + f.message.value;
+  window.location.href = 'mailto:basak.taraktas@bogazici.edu.tr?subject=' +
+    encodeURIComponent('Dia-Pol website message') + '&body=' + encodeURIComponent(body);
+});
+</script>
+</body>
+</html>
